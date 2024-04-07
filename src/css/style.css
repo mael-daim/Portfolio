@@ -11231,7 +11231,10 @@ p {
   width: 0;
   height: 0;
   border-radius: 50%;
-  overflow: hidden;
+}
+.portfolio-card-overlay .portfolio-card-caption{
+  height: 100%;
+  overflow: scroll;
 }
 
 @media (prefers-reduced-motion: reduce) {
