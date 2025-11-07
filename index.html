@@ -14,21 +14,25 @@
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
             <a class="logo" href="#">Portfolio</a>
+            <div class="lang-swithcer">
+                <button onclick="setLanguage('en')" class="lang-btn">🇬🇧</button>
+                <button onclick="setLanguage('fr')" class="lang-btn">🇫🇷</button>
+            </div>
             <ul class="nav">
                 <li class="item">
-                    <a class="link" href="#home">Accueil</a>
+                    <a class="link" href="#home" id="homeText">Accueil</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#about">À propos de moi</a>
+                    <a class="link" href="#about" id="aboutTitle">À propos de moi</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#my-work">Mes réalisations</a>
+                    <a class="link" href="#my-work" id="myWorkTitle">Mes réalisations</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#interets">Mes centres d'intérêts</a>
+                    <a class="link" href="#interets" id="interestsTitle">Mes centres d'intérêts</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="#contact">Me contacter</a>
+                    <a class="link" href="#contact" id="contactTitle">Me contacter</a>
                 </li>
             </ul>
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
@@ -44,10 +48,10 @@
         <div class="overlay"></div>
         <div class="header-content container">
             <h1 class="header-title">
-                <span class="up">Bonjour !</span>
-                <span class="down">Je suis Maël Daim</span>
+                <span class="up" id="greeting">Bonjour !</span>
+                <span class="down" id="iAm">Je suis Maël Daim</span>
             </h1>
-            <p class="header-subtitle">Étudiant - développeur full-stack</p>
+            <p class="header-subtitle" id="status">Étudiant - développeur full-stack</p>
         </div>
     </header>
 
@@ -58,15 +62,15 @@
                     <img src="src/imgs/me.png" class="about-img" alt="My photo">
                 </div>
                 <div class="about-caption">
-                    <p class="section-subtitle">Qui je suis ?</p>
-                    <h2 class="section-title mb-3">À propos de moi</h2>
-                    <p>
-                        Je suis un étudiant en 3 ème année de BUT informatique voulant devenir <strong>développeur full-stack orienté mobile</strong>.<br/>
-                        Je vais prochainement intégrer le Master informatique de L'Isima à Clermont-Ferrand pour réaliser le parcours GLIA.<br/>
-                        J’aime le sport, les jeux vidéos ainsi que la philosophie. 
+                    <p class="section-subtitle" id="who">Qui je suis ?</p>
+                    <h2 class="section-title mb-3" id="aboutTitle">À propos de moi</h2>
+                    <p id="presentation">
+                        Étudiant en première année de master informatique, j'ai découvert le développement par curiosité afin de comprendre comment sont créés les jeux vidéo.<br/>                        
+                        Je souhaite maintenant devenir <strong>développeur full-stack orienté mobile</strong> à la sortie des mes études.<br/>
                         Je suis déterminé à monter en compétences et à gagner en expérience.
                     </p>
-                    <a href="src/imgs/CV_Mael-daim.pdf" target="_blank" class="btn-rounded btn btn-outline-primary mt-4">Voir mon CV</a>
+                    
+                    <a href="src/imgs/CV_Mael-daim.pdf" target="_blank" class="btn-rounded btn btn-outline-primary mt-4" id="cvLink">CV</a>
                 </div>
             </div>
         </div>
@@ -75,7 +79,7 @@
  
     <section class="section" id="service">
         <div class="container text-center">
-            <h6 class="section-title mb-6">Mes compétences ?</h6>
+            <h6 class="section-title mb-6" id="skills">Mes compétences</h6>
 
             <div class="row">
                 <div class="col-md-6 col-lg-3">
@@ -83,8 +87,8 @@
                         <div class="body">
                             <img src="src/imgs/code-square.svg" alt="icon code"
                                 class="icon">
-                            <h6 class="title">Langages de programmation</h6>
-                            <p class="subtitle">Html - CSS - Swift - Java - Python - Kotlin - PHP </p>
+                            <h6 class="title" id="programmingLanguages">Langages de programmation</h6>
+                            <p class="subtitle" id="plList">Html - CSS - Swift - Java - Python - Kotlin - PHP </p>
                         </div>
                     </div>
                 </div>
@@ -93,8 +97,8 @@
                         <div class="body">
                             <img src="src/imgs/toolbox.svg" alt="icon toolbox"
                                 class="icon">
-                            <h6 class="title">Frameworks</h6>
-                            <p class="subtitle"> Spring - Jetpack Compose - SwiftUI </p>
+                            <h6 class="title" id="frameworks">Frameworks</h6>
+                            <p class="subtitle" id="fList"> Spring - Jetpack Compose - SwiftUI </p>
 
                         </div>
                     </div>
@@ -104,8 +108,8 @@
                         <div class="body">
                             <img src="src/imgs/brain.svg" alt="icon brain"
                                 class="icon">
-                            <h6 class="title">Connaissances</h6>
-                            <p class="subtitle"> Git - PostgreSQL - API REST - Concepts SOLID</p>
+                            <h6 class="title" id="knwoledge">Connaissances</h6>
+                            <p class="subtitle" id="kList"> Git - PostgreSQL - API REST - Concepts SOLID</p>
 
                         </div>
                     </div>
@@ -114,8 +118,8 @@
                     <div class="service-card">
                         <div class="body">
                             <img src="src/imgs/skill.svg" alt="icon coding monitor" class="icon" style="filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);">
-                            <h6 class="title">Compétences</h6>
-                            <p class="subtitle">Autonomie - Adaptabilité - Ésprit d'équipe</p>
+                            <h6 class="title" id="softSkills">Compétences humaines</h6>
+                            <p class="subtitle" id="sList">Autonomie - Adaptabilité - Curiosité intellectuelle</p>
                         </div>
                     </div>
                 </div>
@@ -125,15 +129,15 @@
 
     <section class="section" id="my-work">
         <div class="container text-center">
-            <h6 class="section-title mb-6">Mes réalisations</h6>
+            <h6 class="section-title mb-6" id="myWorkTitle">Mes réalisations</h6>
             <div class="row">
                 <div class="col-md-4">
                     <a href="https://codefirst.iut.uca.fr/git/IQBall" class="portfolio-card" >
                         <img src="src/imgs/iqball.png" class="portfolio-card-img" alt="iqball's logo">                        
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
-                                <h4>IQBall</h5>
-                                    <p class="font-weight-normal">Réalisation d'un site web remplaçant la plaquette des coachs de basket et d'une application pour visualiser les tactiques créées et partagées. 
+                                <h4 id="project1Title">IQBall</h5>
+                                    <p class="font-weight-normal" id="project1Description">Réalisation d'un site web remplaçant la plaquette des coachs de basket et d'une application pour visualiser les tactiques créées et partagées. 
                                         Ceci en groupe de 5 et en React/PHP/C#/Compose/... 
                                         En organisation SCRUM<br>
                                         Pour résumé :<br>
@@ -151,8 +155,8 @@
                         <img class="portfolio-card-img" src="src/imgs/portfolio.png" class="img-responsive rounded" alt="portfolio's image">                        
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
-                                <h4>Portfolio</h5>
-                                    <p class="font-weight-normal">
+                                <h4 id="project2Title">Portfolio</h5>
+                                    <p class="font-weight-normal" id="project2Description">
                                         Mise en place en Html/CSS/Javascript de mon portfolio.<br/><br/>
                                          03/2024 - 07/2025
                                     </p>
@@ -165,8 +169,8 @@
                         <img class="portfolio-card-img" src="src/imgs/virtogen.png" class="img-responsive rounded" alt="parcoursup's logo">
                         <span class="portfolio-card-overlay">
                             <span class="portfolio-card-caption">
-                                <h4>Virtogen</h5>
-                                    <p class="font-weight-normal">Logiciel pédagogique de simulation génétique développé pour un outil veillissant de l’UCA.<br/>
+                                <h4 id="project3Title">Virtogen</h5>
+                                    <p class="font-weight-normal" id="project3Description">Logiciel pédagogique de simulation génétique développé pour un outil veillissant de l’UCA.<br/>
                                         Pensé pour les étudiants et enseignants en biologie, il permet de manipuler virtuellement des populations de drosophiles.
                                         Nous avons conçu un backend complet avec logique génétique et un front minimaliste, en collaboration avec la DOSI pour une reprise durable.<br/><br/>
                                         10/2024 - 12/2024
@@ -181,14 +185,14 @@
 
     <section class="section" id="interests">
         <div class="container text-center">
-            <h6 class="section-title mb-6">Mes centres d'intérets</h6>
+            <h6 class="section-title mb-6" id="interestsTitle">Mes centres d'intérets</h6>
             <div class="row d-flex flex-row justify-content-center gap-4 py-3">
                 <div class="col-md-6 col-lg-3 d-flex">
                     <div class="service-card flex-fill">
                         <div class="body">
                             <img src="src/imgs/philosophy.png" alt="icon code" class="icon">
-                            <h6 class="title">Philosophie</h6>
-                            <p class="subtitle" style="font-size: 0.9em;">Néophyte de Schopenhauer, la philosophie m’apporte des grilles de lecture du monde et un esprit critique</p>
+                            <h6 class="title" id="interest1">Philosophie</h6>
+                            <p class="subtitle" style="font-size: 0.9em;" id="interest1Description">Néophyte de Schopenhauer, la philosophie m’apporte des grilles de lecture du monde et un esprit critique</p>
                         </div>
                     </div>
                 </div>
@@ -196,8 +200,8 @@
                     <div class="service-card flex-fill">
                         <div class="body">
                             <img src="src/imgs/video-game.svg" alt="icon toolbox" class="icon" style="filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);">
-                            <h6 class="title">Jeux vidéo</h6>
-                            <p class="subtitle" style="font-size: 0.9em;">Les jeux vidéo développent mon goût pour la compétition et ma persévérance. </p>
+                            <h6 class="title" id="interest2">Jeux vidéo</h6>
+                            <p class="subtitle" style="font-size: 0.9em;" id="interest2Description">Les jeux vidéo développent mon goût pour la compétition et ma persévérance. </p>
                         </div>
                     </div>
                 </div>
@@ -205,13 +209,13 @@
                     <div class="service-card flex-fill">
                         <div class="body">
                             <img src="src/imgs/basketball.svg" alt="icon brain" class="icon" style="filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(0%) contrast(100%);">
-                            <h6 class="title">Sports</h6>
-                            <p class="subtitle" style="font-size: 0.9em;">Le basket et le sport en général m’inculquent l’esprit d’équipe, la discipline et la persévérance.</p>
+                            <h6 class="title" id="intesrest3">Sports</h6>
+                            <p class="subtitle" style="font-size: 0.9em;" id="intesrest3Description">Le basket et le sport en général m’inculquent l’esprit d’équipe, la discipline et la persévérance.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <p>
+            <p id="digitalSpaceText">
                 Je développe sur mon temps libre un <a href="https://www.notion.so/Espace-personnel-21e52d7d148b80b99e96fed38f3db511?source=copy_link" target="_blank"><strong><u>espace numérique personnel</u></strong></a> qui accueille des notes, des réflexions et des lectures que je développe au fil du temps. 
                 J’y explore des sujets variés, en particulier des œuvres philosophiques ainsi que des thématiques politiques ou culturelles. 
                 Cet espace reflète avant tout une démarche de néophyte curieux, désireux de comprendre, de formuler des idées et de progresser dans son rapport au savoir. 
@@ -223,46 +227,34 @@
 
     <section class="section" id="contact">
         <div class="container text-center">
-            <p class="section-subtitle">Où me joindre ?</p>
-            <h6 class="section-title mb-6">Mes contacts</h6>
+            <p class="section-subtitle" id="joinMe">Où me joindre ?</p>
+            <h6 class="section-title mb-6" id="contactTitle">Mes contacts</h6>
             <div class="pricing-wrapper">
                 <div class="pricing-card">
                     <div class="pricing-card-header">
                         <img class="pricing-card-icon" src="src/imgs/linkedin.svg" alt="icon linkedin">
                     </div>
                     <div class="pricing-card-body">
-                        <h6 class="pricing-card-title">Linkedin</h6>
+                        <h6 class="pricing-card-title" id="contact1">Linkedin</h6>
                     </div>
-                    <a href="https://www.linkedin.com/in/maël-daim-3b92952b0/" class="btn btn-primary mt-3 pricing-card-btn">Cliquez ici</a>
+                    <a href="https://www.linkedin.com/in/maël-daim-3b92952b0/" class="btn btn-primary mt-3 pricing-card-btn" id="commonClickHere">Cliquez ici</a>
                 </div>
                 <div class="pricing-card">
                     <div class="pricing-card-header">
                         <img class="pricing-card-icon" src="src/imgs/mail.svg" alt="icon linkedin">
                     </div>
                     <div class="pricing-card-body">
-                        <h6 class="pricing-card-title">Mail</h6>
+                        <h6 class="pricing-card-title" id="contact1">Mail</h6>
                     </div>
                     <a href="mailto:daim.mael@gmail.com" class="btn btn-primary mt-3 pricing-card-btn">daim.mael@gmail.com</a>
                 </div>
-                <div class="pricing-card">
-                    <div class="pricing-card-header">
-                        <img class="pricing-card-icon" src="src/imgs/phone-number.svg"
-                            alt="icon phone number">
-                    </div>
-                    <div class="pricing-card-body">
-                        <h6 class="pricing-card-title">Portable</h6>
-                    </div>
-                    <p  class="btn btn-primary mt-3 pricing-card-btn">06 23 60 87 01</p>
-                </div>
-
             </div><!-- end of pricing wrapper -->
         </div> <!-- end of container -->
     </section>
 
     <div class="container">
         <footer class="footer">
-            <p class="mb-0">Copyright
-                <script>document.write(new Date().getFullYear())</script> &copy; <p>
+            <p class="mb-0">
                     Maël Daim
                 </p>
             </p>
@@ -278,6 +270,9 @@
 
     <!-- Meyawo js -->
     <script src="src/js/meyawo.js"></script>
+
+    <!-- Localization -->
+    <script src="src/localization/strings.js"></script>
 
 </body>
 
